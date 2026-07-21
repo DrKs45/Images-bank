@@ -1,22 +1,20 @@
 name: Test de construction Docker
 
-# Quand est-ce que cette action doit se déclencher ?
 on:
   push:
-    branches: [ "main", "master" ] # À chaque push sur la branche principale
+    branches: [ "main", "master" ] 
   pull_request:
     branches: [ "main", "master" ]
 
 jobs:
   test-build:
     name: Vérifier le build Docker
-    runs-on: ubuntu-latest # Le serveur virtuel fourni par GitHub
+    runs-on: ubuntu-latest 
 
     steps:
-      # Étape 1 : GitHub télécharge votre code sur son serveur
+     
       - name: Récupérer le code source
         uses: actions/checkout@v4
 
-      # Étape 2 : GitHub essaie de construire votre image à partir du Dockerfile
       - name: Tester la construction de l'image web
         run: docker compose build
