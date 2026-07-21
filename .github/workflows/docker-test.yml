@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Checkout du code source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name:  Configuration de l'environnement PHP
         uses: shivammathur/setup-php@v2
